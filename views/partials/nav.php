@@ -31,7 +31,7 @@
                     <?php if (auth()): ?>
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <?= auth()->name ?>
+                                <?= htmlspecialchars(auth()->name) ?>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/logout">Logout</a></li>
@@ -51,6 +51,7 @@
                 <a class="nav-item nav-link link-body-emphasis" href="/tech">Technology</a>
                 <a class="nav-item nav-link link-body-emphasis" href="/form">Form</a>
                 <a class="nav-item nav-link link-body-emphasis" href="/admin/posts">Posts</a>
+                <a class="nav-item nav-link link-body-emphasis" href="/admin/users">Users</a>
                 <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
                 <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
                 <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
